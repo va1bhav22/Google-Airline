@@ -1,4 +1,6 @@
+import ICONS from "@/assets/icons";
 import { navData } from "@/components/core/NavMenues";
+import Image from "next/image";
 import Link from "next/link";
 import { Router, useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -13,19 +15,26 @@ const Navbar = () => {
   };
   useEffect(() => {
     const currentPath = router.pathname;
-    console.log("currentPath====>", currentPath);
+    // console.log("currentPath====>", currentPath);
 
     const activeNavItem = navData.find((item) => item.path === currentPath);
-    console.log("activeNavItem====>", activeNavItem);
+    // console.log("activeNavItem====>", activeNavItem);
     if (activeNavItem) {
       setActive(activeNavItem.id);
     }
   }, [router.pathname]);
 
   return (
-    <section className="border sticky top-0 bg-gray-100   ">
+    <section className="border sticky top-0 bg-white   ">
       <div className="py-2 w-full  main-container flex ">
-        <div className=" w-[20%]"></div>
+        <div className=" w-[20%] flex items-center  gap-6">
+          <div className="cursor-pointer text-xl hover:bg-gray-100 p-3 rounded-full">
+            <ICONS.menu />
+          </div>
+          <div>
+            <img src="/travel/google.png" alt="google Logo" className="h-10" />
+          </div>
+        </div>
         <div className="w-[80%] flex justify-between">
           <div className=" flex items-center  gap-6 ">
             {navData.map((item) => (
@@ -46,7 +55,18 @@ const Navbar = () => {
               </div>
             ))}
           </div>
-          <div className="border-2 border-gray-500"></div>
+          <div className=" flex items-center  gap-3">
+            <div className="cursor-pointer text-xl hover:bg-gray-100 p-3 rounded-full">
+              <ICONS.gridDots />
+            </div>
+            <div>
+              <img
+                src="https://media.licdn.com/dms/image/D5603AQHtsVfUaC4waw/profile-displayphoto-shrink_100_100/0/1684329098397?e=1707350400&v=beta&t=BiSq5DwwUV6VU_E61g3Tq3duLSLd1nlmtfCyee9B9ow"
+                alt="profile Image"
+                className="h-10 rounded-full -rotate-12"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
