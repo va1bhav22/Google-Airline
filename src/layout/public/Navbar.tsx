@@ -4,8 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { Router, useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import ResponsiveNavbar from "./ResponsiveNavbar";
 const Navbar = () => {
   const [active, setActive] = useState<number>(1);
+  const [openMenu, setOpenMenu] = useState<boolean>(false);
   const router = useRouter();
   const handleRoute = () => {};
   const handlePath = (path: string) => {
@@ -24,12 +26,19 @@ const Navbar = () => {
     }
   }, [router.pathname]);
 
+  const handlenav = () => {
+    setOpenMenu(!openMenu);
+  };
+
   return (
     <section className="border sticky top-0 bg-white   ">
       <div className="py-2 w-full  main-container flex ">
         <div className=" w-[20%] flex items-center  gap-6">
-          <div className="cursor-pointer text-xl hover:bg-gray-100 p-3 rounded-full">
-            <ICONS.menu />
+          <div
+            onClick={() => handlenav()}
+            className="cursor-pointer text-xl hover:bg-gray-100 p-3 rounded-full "
+          >
+            {openMenu ? <ICONS.closeMenu /> : <ICONS.menu />}
           </div>
           <div>
             <img src="/travel/google.png" alt="google Logo" className="h-10" />
@@ -68,6 +77,15 @@ const Navbar = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div
+        className={` shadow-[0_3px_10px_rgb(0,0,0,0.2)] ${
+          openMenu
+            ? "fixed top-[3.9rem] left-0 w-[20%]  h-screen bg-white   ease-in-out duration-700"
+            : "fixed left-[-100%] top-[3.9rem] bottom-0 ease-in-out duration-1000"
+        }`}
+      >
+        <ResponsiveNavbar />
       </div>
     </section>
   );

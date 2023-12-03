@@ -122,6 +122,7 @@ const ICONS = {
       fill="none"
       stroke-linecap="round"
       stroke-linejoin="round"
+      {...props}
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M4 6l16 0" />
@@ -140,6 +141,7 @@ const ICONS = {
       fill="none"
       stroke-linecap="round"
       stroke-linejoin="round"
+      {...props}
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
@@ -153,11 +155,12 @@ const ICONS = {
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      stroke-width="1.5"
+      stroke-width="1"
       stroke="currentColor"
       fill="none"
       stroke-linecap="round"
       stroke-linejoin="round"
+      {...props}
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M5 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
@@ -169,6 +172,162 @@ const ICONS = {
       <path d="M5 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
       <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
       <path d="M19 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+    </svg>
+  ),
+  closeMenu: (props: IconType) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 24 24"
+      stroke-width="1"
+      stroke="currentColor"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      {...props}
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M18 6l-12 12" />
+      <path d="M6 6l12 12" />
+    </svg>
+  ),
+  tracking: (props: IconType) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 24 24"
+      stroke-width="1"
+      stroke="currentColor"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      {...props}
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M5 7m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+      <path d="M16 15m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+      <path d="M18 6m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+      <path d="M6 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+      <path d="M9 17l5 -1.5" />
+      <path d="M6.5 8.5l7.81 5.37" />
+      <path d="M7 7l8 -1" />
+    </svg>
+  ),
+  changeLanguage: (props: IconType) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 24 24"
+      stroke-width="1"
+      stroke="currentColor"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      {...props}
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+      <path d="M3.6 9h16.8" />
+      <path d="M3.6 15h16.8" />
+      <path d="M11.5 3a17 17 0 0 0 0 18" />
+      <path d="M12.5 3a17 17 0 0 1 0 18" />
+    </svg>
+  ),
+  currency: (props: IconType) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 24 24"
+      stroke-width="1"
+      stroke="currentColor"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      {...props}
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+      <path d="M3 6m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+      <path d="M18 12l.01 0" />
+      <path d="M6 12l.01 0" />
+    </svg>
+  ),
+  location: (props: IconType) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 24 24"
+      stroke-width="1"
+      stroke="currentColor"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      {...props}
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+      <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+    </svg>
+  ),
+  setting: (props: IconType) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 24 24"
+      stroke-width="1"
+      stroke="currentColor"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      {...props}
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z" />
+      <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+    </svg>
+  ),
+  feedback: (props: IconType) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 24 24"
+      stroke-width="1"
+      stroke="currentColor"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      {...props}
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M4 21v-13a3 3 0 0 1 3 -3h10a3 3 0 0 1 3 3v6a3 3 0 0 1 -3 3h-9l-4 4" />
+      <path d="M12 8l0 3" />
+      <path d="M12 14l0 .01" />
+    </svg>
+  ),
+  help: (props: IconType) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      {...props}
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+      <path d="M12 17l0 .01" />
+      <path d="M12 13.5a1.5 1.5 0 0 1 1 -1.5a2.6 2.6 0 1 0 -3 -4" />
     </svg>
   ),
 };
