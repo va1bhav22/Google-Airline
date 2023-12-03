@@ -47,7 +47,7 @@ const Navbar = () => {
         <div className="w-[80%] flex justify-between">
           <div className=" flex items-center  gap-6 ">
             {navData.map((item) => (
-              <div onClick={() => handlePath(item?.path)}>
+              <div key={item?.id} onClick={() => handlePath(item?.path)}>
                 <Link href={""}>
                   <div
                     onClick={() => {
@@ -81,7 +81,7 @@ const Navbar = () => {
       <div
         className={` shadow-[0_3px_10px_rgb(0,0,0,0.2)] ${
           openMenu
-            ? "fixed top-[3.9rem] left-0 w-[20%]  h-screen bg-white   ease-in-out duration-700"
+            ? "fixed top-[3.9rem] left-0 w-[20%]  h-screen bg-white  overflow-y-auto  ease-in-out duration-700"
             : "fixed left-[-100%] top-[3.9rem] bottom-0 ease-in-out duration-1000"
         }`}
       >

@@ -13,7 +13,7 @@ export const navData = [
   },
 ];
 
-const ResponsiveNavData = [
+export const ResponsiveNavData = [
   { id: 1, name: "Travel", icon: <ICONS.balloon />, path: "/" },
   { id: 2, name: "Explore", icon: <ICONS.explore />, path: "/explore" },
   { id: 3, name: "Flight", icon: <ICONS.flight />, path: "/flight" },
@@ -39,7 +39,7 @@ const ResponsiveNavData = [
   {
     id: 8,
     name: "Change currency",
-    icon: <ICONS.changeLanguage />,
+    icon: <ICONS.currency />,
     path: "",
   },
   {
