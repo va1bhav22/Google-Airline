@@ -23,7 +23,7 @@ const Navbar = () => {
   }, [router.pathname]);
 
   return (
-    <section className="border sticky top-0 bg-white  ">
+    <section className="border sticky top-0 bg-gray-100   ">
       <div className="py-2 w-full  main-container flex ">
         <div className=" w-[20%]"></div>
         <div className="w-[80%] flex justify-between">
