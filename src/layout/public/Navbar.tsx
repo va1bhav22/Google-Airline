@@ -44,10 +44,14 @@ const Navbar = () => {
             <img src="/travel/google.png" alt="google Logo" className="h-10" />
           </div>
         </div>
-        <div className="w-[80%] flex justify-between">
+        <div className="w-[80%] flex justify-between ">
           <div className=" flex items-center  gap-6 ">
             {navData.map((item) => (
-              <div key={item?.id} onClick={() => handlePath(item?.path)}>
+              <div
+                key={item?.id}
+                onClick={() => handlePath(item?.path)}
+                className="hidden lg:block"
+              >
                 <Link href={""}>
                   <div
                     onClick={() => {
