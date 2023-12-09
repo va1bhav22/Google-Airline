@@ -1,15 +1,14 @@
 import ICONS from "@/assets/icons";
 import { navData } from "@/components/core/NavMenues";
-import Image from "next/image";
 import Link from "next/link";
-import { Router, useRouter } from "next/router";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import ResponsiveNavbar from "./ResponsiveNavbar";
 const Navbar = () => {
   const [active, setActive] = useState<number>(1);
   const [openMenu, setOpenMenu] = useState<boolean>(false);
   const router = useRouter();
-  const handleRoute = () => {};
+
   const handlePath = (path: string) => {
     if (path) {
       router.push(path);
@@ -31,9 +30,9 @@ const Navbar = () => {
   };
 
   return (
-    <section className="border sticky top-0 bg-white   ">
+    <section className="border z-[9999] sticky top-0 bg-white   ">
       <div className="py-2 w-full  main-container flex ">
-        <div className=" w-[20%] flex items-center  gap-6">
+        <div className="w-full md:w-[20%] flex items-center  gap-6">
           <div
             onClick={() => handlenav()}
             className="cursor-pointer text-xl hover:bg-gray-100 p-3 rounded-full "
@@ -85,7 +84,7 @@ const Navbar = () => {
       <div
         className={` shadow-[0_3px_10px_rgb(0,0,0,0.2)] ${
           openMenu
-            ? "fixed top-[3.9rem] left-0 w-[20%]  h-screen bg-white  overflow-y-auto  ease-in-out duration-700"
+            ? "fixed top-[3.9rem] left-0 lg:w-[20%] w-[60%] md:w-[40%] h-screen bg-white  overflow-y-auto  ease-in-out duration-700"
             : "fixed left-[-100%] top-[3.9rem] bottom-0 ease-in-out duration-1000"
         }`}
       >
