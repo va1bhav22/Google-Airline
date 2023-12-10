@@ -1,4 +1,5 @@
 import ICONS from "@/assets/icons";
+import Populardestinations from "@/components/Travel/Populardestinations";
 import RedirectMenus from "@/components/Travel/RedirectMenus";
 import PublicLayout from "@/layout/public";
 import { Inter } from "next/font/google";
@@ -49,6 +50,9 @@ export default function Home() {
         </div>
         <div>
           <RedirectMenus />
+        </div>
+        <div>
+          <Populardestinations />
         </div>
       </section>
     </PublicLayout>

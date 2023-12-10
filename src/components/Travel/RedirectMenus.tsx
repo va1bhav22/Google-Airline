@@ -24,7 +24,7 @@ const RedirectMenus = () => {
       {navData?.map((item) => (
         <div
           key={item.id}
-          className={`flex flex-col items-center text-xs  md:text-sm hover:bg-gray-200 transition-all duration-500 ease-in-out  rounded-md px-2 md:px-4 py-1 md:py-3 ${
+          className={`cursor-pointer flex flex-col items-center text-xs  md:text-sm hover:bg-gray-200 transition-all duration-500 ease-in-out  rounded-md px-2 md:px-4 py-1 md:py-3 ${
             item.id === 1 ? "hidden" : "block"
           }`}
           onClick={() => handlePath(item?.path)}
